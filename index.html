@@ -9,14 +9,143 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="p-5 mb-4">
+    <header class="p-5 text-center">
         <h1 class="display-3">Work Day Scheduler</h1>
         <p class="lead">A simple calendar app for scheduling your work day</p>
         <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container-fluid px-5">
-        <!-- Single column for a day's 12-hour cycle -->
-        <div class="day-column"></div>
+    <div class="container">
+        <!-- Time blocks for each hour from 6 AM to 6 PM -->
+        <!-- Example for 6 AM -->
+        <div class="row time-block">
+            <div class="col-md-1 hour" data-hour="6">6AM</div>
+            <textarea class="col-md-10 description" rows="3"></textarea>
+            <button class="col-md-1 saveBtn">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+        <!-- Repeat the above row for each hour until 6 PM -->
+        <!-- Example for 7 AM -->
+        <div class="row time-block">
+            <div class="col-md-1 hour" data-hour="7">7AM</div>
+            <textarea class="col-md-10 description" rows="3"></textarea>
+            <button class="col-md-1 saveBtn">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+        <!-- Repeat the above row for each hour until 6 PM -->
+        <!-- Continue this pattern for each hour until 6 PM -->
+        <!-- Example for 8 AM -->
+        <div class="row time-block">
+            <div class="col-md-1 hour" data-hour="8">8AM</div>
+            <textarea class="col-md-10 description" rows="3"></textarea>
+            <button class="col-md-1 saveBtn">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+        <!-- Repeat the above row for each hour until 6 PM -->
+        <!-- Continue this pattern for each hour until 6 PM -->
+        <!-- Example for 9 AM -->
+        <div class="row time-block">
+            <div class="col-md-1 hour" data-hour="9">9AM</div>
+            <textarea class="col-md-10 description" rows="3"></textarea>
+            <button class="col-md-1 saveBtn">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+        <!-- Repeat the above row for each hour until 6 PM -->
+        <!-- Continue this pattern for each hour until 6 PM -->
+        <!-- Example for 10 AM -->
+        <div class="row time-block">
+            <div class="col-md-1 hour" data-hour="10">10AM</div>
+            <textarea class="col-md-10 description" rows="3"></textarea>
+            <button class="col-md-1 saveBtn">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+        <!-- Repeat the above row for each hour until 6 PM -->
+        <!-- Continue this pattern for each hour until 6 PM -->
+        <!-- Example for 11 AM -->
+        <div class="row time-block">
+            <div class="col-md-1 hour" data-hour="11">11AM</div>
+            <textarea class="col-md-10 description" rows="3"></textarea>
+            <button class="col-md-1 saveBtn">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+        <!-- Repeat the above row for each hour until 6 PM -->
+        <!-- Continue this pattern for each hour until 6 PM -->
+        <!-- Example for 12 PM -->
+        <div class="row time-block">
+            <div class="col-md-1 hour" data-hour="12">12PM</div>
+            <textarea class="col-md-10 description" rows="3"></textarea>
+            <button class="col-md-1 saveBtn">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+        <!-- Repeat the above row for each hour until 6 PM -->
+        <!-- Continue this pattern for each hour until 6 PM -->
+        <!-- Example for 1 PM -->
+        <div class="row time-block">
+            <div class="col-md-1 hour" data-hour="1">1PM</div>
+            <textarea class="col-md-10 description" rows="3"></textarea>
+            <button class="col-md-1 saveBtn">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+        <!-- Repeat the above row for each hour until 6 PM -->
+        <!-- Continue this pattern for each hour until 6 PM -->
+        <!-- Example for 2 PM -->
+        <div class="row time-block">
+            <div class="col-md-1 hour" data-hour="2">2PM</div>
+            <textarea class="col-md-10 description" rows="3"></textarea>
+            <button class="col-md-1 saveBtn">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+        <!-- Repeat the above row for each hour until 6 PM -->
+        <!-- Continue this pattern for each hour until 6 PM -->
+        <!-- Example for 3 PM -->
+        <div class="row time-block">
+            <div class="col-md-1 hour" data-hour="3">3PM</div>
+            <textarea class="col-md-10 description" rows="3"></textarea>
+            <button class="col-md-1 saveBtn">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+        <!-- Repeat the above row for each hour until 6 PM -->
+        <!-- Continue this pattern for each hour until 6 PM -->
+        <!-- Example for 4 PM -->
+        <div class="row time-block">
+            <div class="col-md-1 hour" data-hour="4">4PM</div>
+            <textarea class="col-md-10 description" rows="3"></textarea>
+            <button class="col-md-1 saveBtn">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+        <!-- Repeat the above row for each hour until 6 PM -->
+        <!-- Continue this pattern for each hour until 6 PM -->
+        <!-- Example for 5 PM -->
+        <div class="row time-block">
+            <div class="col-md-1 hour" data-hour="5">5PM</div>
+            <textarea class="col-md-10 description" rows="3"></textarea>
+            <button class="col-md-1 saveBtn">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+        <!-- Repeat the above row for each hour until 6 PM -->
+        <!-- Continue this pattern for each hour until 6 PM -->
+        <!-- Example for 6 AM -->
+        <div class="row time-block">
+            <div class="col-md-1 hour" data-hour="6">6PM</div>
+            <textarea class="col-md-10 description" rows="3"></textarea>
+            <button class="col-md-1 saveBtn">
+                <i class="fas fa-save"></i>
+            </button>
+        </div>
+        <!-- Repeat the above row for each hour until 6 PM -->
+        <!-- Continue this pattern for hours 9 AM to 6 PM -->
+        <!-- Add similar code for hours 9 AM to 6 PM -->
     </div>
     <!-- Include your JavaScript files just before the closing body tag -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

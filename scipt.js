@@ -5,39 +5,27 @@ $(function () {
         $("#currentDay").text(currentDate);
     }
 
-    // Function to update the day column with color-coded hours
-    function updateDayColumn() {
+    // Function to update the time blocks with color-coded hours
+    function updateTimeBlocks() {
         var currentHour = dayjs().hour();
-        var dayColumn = $(".day-column");
-        
-        // Clear the day column
-        dayColumn.empty();
 
-        // Generate the 12-hour cycle
-        for (var i = 1; i <= 12; i++) {
-            var hourDisplay = i <= 9 ? "0" + i : i;
-            var ampm = currentHour >= 12 ? "PM" : "AM";
-            var hour = currentHour >= 12 ? currentHour - 12 : currentHour;
+        // Loop through each time block
+        $(".time-block").each(function () {
+            var row = $(this);
+            var blockHour = parseInt(row.find(".hour").data("hour")); // Use data-hour attribute
+            var description = row.find(".description");
 
-            var hourBlock = $("<div>")
-                .addClass("hour-block")
-                .text(hourDisplay + " " + ampm);
-
-            // Add different classes based on the current hour
-            if (i === hour) {
-                hourBlock.addClass("current-hour");
-            } else if (i < hour) {
-                hourBlock.addClass("past-hour");
+            if (blockHour < currentHour) {
+                row.addClass("past");
+            } else if (blockHour === currentHour) {
+                row.addClass("present");
             } else {
-                hourBlock.addClass("future-hour");
+                row.addClass("future");
             }
-
-            // Append the hour block to the day column
-            dayColumn.append(hourBlock);
-        }
+        });
     }
 
     // Call functions to initialize the scheduler
     displayCurrentDate();
-    updateDayColumn();
+    updateTimeBlocks();
 });
